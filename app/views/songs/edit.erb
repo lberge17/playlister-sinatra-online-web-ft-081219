@@ -2,11 +2,11 @@
 <form method="POST" action="/songs/<%= @song.slug %>">
   <input id="hidden" type="hidden" name="_method" value="patch">
   <label for="Name">Song Name:</label>
-  <input type="text" name="Name" id="Name" placeholder="<%= @song.name %>"><br>
+  <input type="text" name="Name" id="Name" value="<%= @song.name %>"><br>
   
   <h2>Artist:</h2>
   <label for="Artist Name">New Artist Name:</label>
-  <input type="text" name="Artist Name" id="Artist Name" placeholder="<%= @song.artist.name %>">
+  <input type="text" name="Artist Name" id="Artist Name" value="<%= @song.artist.name %>">
   
   <h2>Choose a genre:</h2>
   <% @genres.each do |genre| %>
