@@ -9,7 +9,7 @@
   <input type="text" name="Artist Name" id="Artist Name" placeholder="<%= @song.artist.name %>">
   
   <h2>Choose a genre:</h2>
-  <% @song.genre.each do |genre| %>
+  <% @song.genres.each do |genre| %>
     <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>" <%='checked' if @song.genres.include?(genre) %>><%= genre.name %><br>
   <% end %>
 
